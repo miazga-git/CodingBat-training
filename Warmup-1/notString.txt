@@ -1,0 +1,13 @@
+public String notString(String str) {
+  String str2="";
+  if(str.length()>=3){
+    str2=str.substring(3);
+  }
+  
+  
+  if(str.equals("not"+str2)){
+    return str;
+  }else{
+    return "not "+str;
+  }
+}

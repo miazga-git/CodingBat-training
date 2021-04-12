@@ -1,0 +1,10 @@
+public String startOz(String str) {
+  String first="",sec="";
+  if(str.length()>=1&&str.substring(0,1).equals("o")){
+    first="o";
+  }
+  if(str.length()>=2&& str.substring(1,2).equals("z")){
+    sec="z";
+  }
+ return first+sec;
+}
