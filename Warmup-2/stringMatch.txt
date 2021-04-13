@@ -1,0 +1,24 @@
+
+Given 2 strings, a and b, return the number of the positions where they contain the same length 2 substring. So "xxcaazz" and "xxbaaz" yields 3, since the "xx", "aa", and "az" substrings appear in the same place in both strings.
+
+
+stringMatch("xxcaazz", "xxbaaz") → 3
+stringMatch("abc", "abc") → 2
+stringMatch("abc", "axc") → 0
+
+public int stringMatch(String a, String b) {
+  String str, str2;
+  int count=0;
+  if(a.length()>b.length()){
+    str=b;
+    str2=a;
+  }else{
+    str=a;
+    str2=b;
+  }
+  for(int i=0;i<str.length()-1;i++){
+    if(str.substring(i,i+2).equals(str2.substring(i,i+2)))
+    count++;
+  }
+  return count;
+}

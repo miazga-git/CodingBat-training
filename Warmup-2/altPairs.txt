@@ -1,0 +1,26 @@
+
+Given a string, return a string made of the chars at indexes 0,1, 4,5, 8,9 ... so "kittens" yields "kien".
+
+
+altPairs("kitten") → "kien"
+altPairs("Chocolate") → "Chole"
+altPairs("CodingHorror") → "Congrr"
+
+public String altPairs(String str) {
+  String res="";
+  int counter=0;
+  boolean wasThere=true;
+  while(counter<str.length()){
+    if(wasThere==false&&counter<=str.length()){
+    res+=str.substring(counter,counter+1);
+    counter+=3;
+    wasThere=true;
+    }else if(counter<=str.length()){
+    res+=str.charAt(counter);
+    counter+=1;
+    wasThere=false;
+    }
+
+  }
+  return res;
+}
